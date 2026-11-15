@@ -1,0 +1,11 @@
+# Serve the Android app as a download (not as text) and never run scripts here.
+AddType application/vnd.android.package-archive .apk
+<IfModule mod_headers.c>
+    <FilesMatch "\.apk$">
+        Header set Content-Disposition "attachment; filename=mafqoodak.apk"
+    </FilesMatch>
+</IfModule>
+<FilesMatch "\.(php|phtml|phar)$">
+    Require all denied
+</FilesMatch>
+Options -Indexes

@@ -1,0 +1,504 @@
+:root {
+    --gov-green: #0d4a3a;        /* أخضر زيتي */
+    --gov-green-dark: #072e24;
+    --gov-gold: #9E793E;         /* ذهبي / برونزي ملكي ناعم */
+    --gov-bronze: #9E793E;       /* اسم بديل لنفس اللون (للتوافق) */
+    --gov-bg-light: #f8faf9;
+    --border-color: #e5e7eb;
+}
+
+/* ---------- 2. الأساسيات ---------- */
+body {
+    font-family: 'IBM Plex Sans Arabic', 'Noto Sans', sans-serif;
+    color: #1f2937;
+}
+body.page-home { background-color: #ffffff; }
+body.page-form { background-color: var(--gov-bg-light); }
+
+/* ---------- 3. شريط التنقل ---------- */
+.navbar-gov {
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--gov-gold);
+    padding: 14px 0;
+}
+
+.brand-title {
+    color: var(--gov-green);
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+.page-home .brand-title { letter-spacing: -0.5px; }
+
+.nav-link {
+    color: #374151 !important;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin: 0 8px;
+}
+.nav-link:hover { color: var(--gov-green) !important; }
+
+/* ---------- 4. مبدل اللغة ---------- */
+.lang-option.active {
+    font-weight: 700;
+    color: var(--gov-green) !important;
+}
+
+.btn-gov-lang {
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    padding: 10px 22px;
+}
+
+/* ---------- 5. أزرار الهوية ---------- */
+.btn-gov-primary {
+    background-color: var(--gov-green);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    transition: background-color 0.2s;
+}
+.btn-gov-primary:hover {
+    background-color: var(--gov-green-dark);
+    color: #ffffff;
+}
+
+.btn-gov-gold {
+    background-color: var(--gov-gold);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    transition: opacity 0.2s;
+}
+.btn-gov-gold:hover {
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+/* زر الإرسال (أخضر) في صفحة طلب المفقود */
+.btn-gov-submit {
+    background-color: var(--gov-green);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 30px;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+.btn-gov-submit:hover {
+    background-color: var(--gov-green-dark);
+    color: #ffffff;
+}
+
+/* الزر الذهبي داخل صفحات النماذج: بعرض كامل وحجم أكبر */
+.page-form .btn-gov-gold {
+    font-size: 1rem;
+    padding: 12px 30px;
+    width: 100%;
+}
+
+/* زر تأكيد الموقع داخل نافذة الخريطة */
+.btn-modal-confirm { width: auto !important; }
+
+/* ---------- 6. الصفحة الرئيسية ---------- */
+.hero-banner {
+    background-color: var(--gov-bg-light);
+    border-bottom: 1px solid var(--border-color);
+    padding: 80px 0;
+}
+.hero-title { color: var(--gov-green); }
+.hero-desc {
+    max-width: 680px;
+    line-height: 1.8;
+}
+
+.section-title {
+    color: var(--gov-green);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+/* بطاقات الخدمات */
+.card-gov {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 32px 24px;
+    height: 100%;
+    transition: all 0.2s ease-in-out;
+}
+.card-gov:hover {
+    border-color: var(--gov-gold);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+}
+
+.icon-box {
+    width: 56px;
+    height: 56px;
+    background-color: var(--gov-bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--gov-green);
+}
+.icon-box-gold { color: var(--gov-gold); }
+
+.service-desc { line-height: 1.6; }
+
+.service-link { color: var(--gov-green); }
+.service-link-gold { color: var(--gov-gold); }
+
+/* قسم الاستعلام */
+.search-section {
+    background-color: var(--gov-bg-light);
+    border-top: 1px solid var(--border-color);
+}
+
+/* ---------- 7. صفحات النماذج ---------- */
+.form-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 35px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.section-header-title {
+    color: var(--gov-green);
+    font-weight: 700;
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--gov-gold);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--gov-green);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.form-control,
+.form-select {
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    font-size: 0.95rem;
+}
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--gov-gold);
+    box-shadow: 0 0 0 0.25rem rgba(158, 121, 62, 0.15);
+}
+
+/* صندوق مشاركة الموقع */
+.location-share-box {
+    border: 1px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 16px;
+    background-color: var(--gov-bg-light);
+}
+
+/* حاويات الخرائط (Leaflet) */
+#lost_map_container,
+#found_map_container {
+    height: 350px;
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* ---------- 8. الفوتر ---------- */
+footer {
+    background-color: var(--gov-green-dark);
+    color: #ffffff;
+    padding: 20px 0;
+    border-top: 3px solid var(--gov-gold);
+}
+.page-home footer { padding: 24px 0; }
+
+/* ---------- 9. نتيجة الاستعلام (تُولَّد من app.js) ---------- */
+.track-report-id { color: var(--gov-green, #1b4332); }
+.track-progress { height: 10px; }
+.track-progress-bar { width: 40%; background-color: var(--gov-green); }
+/* ---------- 10. صفحة التسجيل / الدخول ---------- */
+.auth-split { background-color: #ffffff; min-height: calc(100vh - 140px); }
+
+.auth-form-wrap {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+.auth-title {
+    color: var(--gov-green);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.auth-image {
+    height: 100%;
+    min-height: 600px;
+    background-image: url('../images/haram-hero.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* بطاقات اختيار الفئة */
+.role-choice { position: relative; }
+.role-choice input[type="radio"] { position: absolute; opacity: 0; width: 0; height: 0; }
+.role-choice label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 14px 16px;
+    cursor: pointer;
+    margin-bottom: 0;
+    transition: all 0.15s;
+}
+.role-choice label:hover { border-color: var(--gov-green); }
+.role-choice input[type="radio"]:checked + label {
+    border-color: var(--gov-green);
+    background-color: rgba(13, 74, 58, 0.06);
+}
+.role-choice input[type="radio"]:checked + label .fw-bold { color: var(--gov-green); }
+.role-choice label > i {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gov-bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: var(--gov-green);
+}
+
+/* ---------- 11. لوحة الأفراد ---------- */
+.dash-wrap { padding: 30px 12px 50px; }
+
+.dash-sidebar {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 12px;
+}
+.dash-nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 14px;
+    color: #374151;
+    font-weight: 500;
+    text-align: start;
+    transition: all 0.15s;
+}
+.dash-nav-btn:hover { background-color: rgba(13, 74, 58, 0.07); color: var(--gov-green); }
+.dash-nav-btn.active { background-color: rgba(13, 74, 58, 0.1); color: var(--gov-green); font-weight: 700; }
+.dash-nav-btn .badge { margin-inline-start: auto; }
+@media (min-width: 992px) { .dash-nav-btn { width: 100%; } }
+
+.dash-panel { display: none; }
+.dash-panel.active { display: block; }
+
+.dash-title { color: var(--gov-green); font-weight: 700; font-size: 1.3rem; }
+
+.dash-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 14px;
+    transition: border-color 0.15s;
+}
+.dash-card:hover { border-color: var(--gov-gold); }
+
+.notif-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+}
+.notif-item.unread {
+    border-inline-start: 4px solid var(--gov-green);
+    background-color: rgba(13, 74, 58, 0.04);
+}
+.notif-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: var(--gov-bg-light);
+    border: 1px solid var(--border-color);
+    color: var(--gov-green);
+}
+/* ---------- 12. لوحة الإدارة ---------- */
+.stat-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 18px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: var(--gov-bg-light);
+    border: 1px solid var(--border-color);
+    color: var(--gov-green);
+    font-size: 1.3rem;
+}
+.stat-number {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--gov-green);
+    line-height: 1.1;
+}
+
+.admin-table {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.admin-table th {
+    background-color: var(--gov-bg-light);
+    color: var(--gov-green);
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+.admin-table td { vertical-align: middle; font-size: 0.9rem; }
+/* تثبيت تقسيم صفحات الدخول والتسجيل لنصفين (نسخة نهائية) */
+.auth-split .row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.auth-split .row > div {
+    width: 50% !important;
+    max-width: 50% !important;
+    flex: 0 0 50% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.auth-split .auth-image {
+    height: 100%;
+    min-height: 600px;
+}
+@media (max-width: 991.98px) {
+    .auth-split .row > div { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
+}
+.auth-split .auth-image { background-position: center top; }
+body.page-form { min-height: 100vh; display: flex; flex-direction: column; }
+body.page-form > .container.dash-wrap { flex: 1 0 auto; }
+body.page-form footer { margin-top: auto; }
+
+.dash-tabs {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 24px;
+    padding-bottom: 0;
+}
+.dash-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 12px 18px;
+    color: #374151;
+    font-weight: 500;
+    white-space: nowrap;
+    margin-bottom: -2px;
+}
+.dash-tab:hover { color: var(--gov-green); }
+.dash-tab.active {
+    color: var(--gov-green);
+    font-weight: 700;
+    border-bottom-color: var(--gov-green);
+}
+
+.dash-tabs { scrollbar-width: none; }
+.dash-tabs::-webkit-scrollbar { display: none; }
+
+/* ---------- 14. لوحة الإدارة: قائمة جانبية ثابتة ---------- */
+.admin-wrap { padding: 30px 24px 50px; }
+.admin-sidebar {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 12px;
+    position: sticky;
+    top: 20px;
+}
+.admin-nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 14px;
+    color: #374151;
+    font-weight: 500;
+    text-align: start;
+    transition: all 0.15s;
+    margin-bottom: 4px;
+}
+.admin-nav-btn i { font-size: 1.05rem; width: 22px; text-align: center; color: var(--gov-green); }
+.admin-nav-btn:hover { background-color: rgba(13, 74, 58, 0.07); color: var(--gov-green); }
+.admin-nav-btn.active { background-color: rgba(13, 74, 58, 0.1); color: var(--gov-green); font-weight: 700; }
+.admin-panel { display: none; }
+.admin-panel.active { display: block; }
+#heatmapContainer { height: 420px; width: 100%; border-radius: 8px; }
+@media (max-width: 991.98px) {
+    .admin-sidebar { position: static; display: flex; overflow-x: auto; gap: 4px; padding: 8px; }
+    .admin-nav-btn { width: auto; white-space: nowrap; margin-bottom: 0; }
+}

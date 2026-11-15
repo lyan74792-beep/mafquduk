@@ -1,0 +1,28 @@
+# Local tools and editors
+graphify-out/
+.claude/
+.idea/
+.vscode/
+*.log
+.DS_Store
+Thumbs.db
+
+# Website: files people upload stay on the server, never in git
+website/assets/uploads/*
+!website/assets/uploads/.htaccess
+
+# Flutter / Android build output and machine-specific files
+# (mobile_app/.gitignore covers the rest)
+mobile_app/build/
+mobile_app/.dart_tool/
+mobile_app/android/.gradle/
+mobile_app/android/.kotlin/
+mobile_app/android/local.properties
+mobile_app/android/key.properties
+*.jks
+*.keystore
+
+# App builds: not stored in git (build them, then upload to the server)
+*.apk
+*.aab
+*.ipa

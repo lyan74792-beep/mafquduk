@@ -1,0 +1,8 @@
+# Send every /api/... request to the router (index.php).
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+
+# Apache drops the Authorization header for PHP unless told to pass it on.
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
